@@ -15,15 +15,15 @@ public class ChatbotController {
         this._chatbotView = chatbotView;
         this._chatbotModel = chatbotModel;
 
-        this._chatbotView.getInputPanel().getSendButton().addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                handleUserInput();
-            }
-        });
+        //adding the action listener to the send button
+        this._chatbotView.getInputPanel().getSendButton().addActionListener(e -> handleUserInput());
     }
 
     private void handleUserInput() {
         String userInput = _chatbotView.getInputPanel().getInputField().getText();
+        if (userInput.trim().isEmpty()) {
+            return;
+        }
         _chatbotModel.addMessage("User: " + userInput);
         String response = _chatbotModel.generateResponse(userInput);
         _chatbotModel.addMessage("Bot: " + response);

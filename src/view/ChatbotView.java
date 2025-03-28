@@ -34,4 +34,5 @@ public class ChatbotView extends JFrame {
     public InputPanel getInputPanel() {
         return _inputPanel;
     }
+
 }
