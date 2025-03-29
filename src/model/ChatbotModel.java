@@ -5,7 +5,7 @@ import java.util.List;
 
 public class ChatbotModel {
 
-    private final List<String> _conversationHistory;
+    private final ArrayList<String> _conversationHistory;
 
     public ChatbotModel() {
         _conversationHistory = new ArrayList<>();
@@ -16,7 +16,7 @@ public class ChatbotModel {
     }
 
     public String generateResponse(String userInput) {
-        return "Antwort vom Bot: ......";
+        return "Es tut mir leid, aber "+ userInput + " kann ich noch nicht beantworten.";
     }
 
     public List<String> getConversationHistory() {

@@ -5,13 +5,10 @@ import view.GlobalConfig;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class InputPanel extends JPanel {
-
-    private JTextArea _inputField;
-    private JButton _sendButton;
+    private final JTextArea _inputField;
+    private final JButton _sendButton;
 
     public InputPanel() {
         this.setBorder(new EmptyBorder(10, 10, 10, 10));
@@ -43,5 +40,4 @@ public class InputPanel extends JPanel {
     public JButton getSendButton() {
         return _sendButton;
     }
-
 }

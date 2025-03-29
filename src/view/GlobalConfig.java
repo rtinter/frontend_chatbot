@@ -10,6 +10,5 @@ public class GlobalConfig {
     public static final int FONT_SIZE = 16;
     public static final String FONT = "Roboto";
     public static final Font DEFAULT_FONT = new Font(FONT, Font.PLAIN, FONT_SIZE);
-
 }
 

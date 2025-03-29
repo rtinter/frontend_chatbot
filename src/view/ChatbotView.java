@@ -7,12 +7,10 @@ import javax.swing.*;
 import java.awt.*;
 
 public class ChatbotView extends JFrame {
-
     private final ConversationPanel _conversationPanel;
     private final InputPanel _inputPanel;
 
     public ChatbotView() {
-
         setTitle(GlobalConfig.TITLE);
         setSize(GlobalConfig.FRAME_WIDTH, GlobalConfig.FRAME_HEIGHT);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
