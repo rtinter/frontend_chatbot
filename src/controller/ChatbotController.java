@@ -21,7 +21,7 @@ public class ChatbotController {
         _chatbotModel.addMessage("User: " + userInput);
         String response = _chatbotModel.generateResponse(userInput);
         _chatbotModel.addMessage("Bot: " + response);
-        _chatbotView.getConversationPanel().updateConversation(_chatbotModel.getConversationHistory());
+        _chatbotView.getConversationPanel().updateConversation(_chatbotModel.getCurrentConversation());
         _chatbotView.getInputPanel().getInputField().setText("");
     }
 }
