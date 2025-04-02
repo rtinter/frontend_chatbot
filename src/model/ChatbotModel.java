@@ -16,11 +16,10 @@ public class ChatbotModel {
     }
 
     public String generateResponse(String userInput) {
-        return "Es tut mir leid, aber "+ userInput + " kann ich noch nicht beantworten.";
+        return "API Call für den output: " + userInput;
     }
 
     public List<String> getCurrentConversation() {
         return _currentConversation;
     }
-
 }

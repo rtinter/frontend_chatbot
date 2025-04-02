@@ -15,13 +15,13 @@ public class ChatbotController {
 
     private void handleUserInput() {
         String userInput = _chatbotView.getInputPanel().getInputField().getText();
+        String response = _chatbotModel.generateResponse(userInput);
         if (userInput.trim().isEmpty()) {
             return;
         }
         _chatbotModel.addMessage("User: " + userInput);
-        String response = _chatbotModel.generateResponse(userInput);
         _chatbotModel.addMessage("Bot: " + response);
-        _chatbotView.getConversationPanel().updateConversation(_chatbotModel.getCurrentConversation());
+        _chatbotView.getConversationPanel().setText(String.join("\n", _chatbotModel.getCurrentConversation()));
         _chatbotView.getInputPanel().getInputField().setText("");
     }
 }

@@ -13,7 +13,7 @@ public class InputPanel extends JPanel {
     public InputPanel() {
         this.setBorder(new EmptyBorder(10, 10, 10, 10));
 
-        // Improved input field
+        // inputfield setup
         _inputField = new JTextArea();
         _inputField.setPreferredSize(new Dimension(GlobalConfig.FRAME_WIDTH, 40));
         _inputField.setLineWrap(true);
